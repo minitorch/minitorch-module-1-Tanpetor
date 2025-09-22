@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-#from io import valid_seek_flags
+from io import valid_seek_flags
 from typing import Any, Iterable, List, Tuple
 from collections import deque, defaultdict
 from typing_extensions import Protocol
