@@ -70,11 +70,11 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
     visit_list = set()
     res = []
 
-    def dfs(node: Variable):
+    def dfs(node: Variable) -> Any:
         if node.unique_id in visit_list or node.is_constant():
             return
         if not node.is_leaf():
-            for v in node.history.inputs:
+            for v in node.parents:
                 dfs(v)
         visit_list.add(node.unique_id)
         res.append(node)
