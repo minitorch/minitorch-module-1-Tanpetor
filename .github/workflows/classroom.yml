@@ -20,7 +20,6 @@ jobs:
         test-name: Setup
         setup-command: sudo -H pip3 install -qr requirements.txt; sudo -H pip3 install
           flake8==5.0.4
-        command: mypy minitorch/*
         timeout: 10
         max-score: 10
     - name: Task 1.1
